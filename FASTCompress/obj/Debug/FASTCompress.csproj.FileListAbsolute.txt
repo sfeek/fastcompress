@@ -1,0 +1,9 @@
+C:\SourceCode\fastcompress\FASTCompress\bin\Debug\FASTCompress.exe.config
+C:\SourceCode\fastcompress\FASTCompress\bin\Debug\FASTCompress.exe.manifest
+C:\SourceCode\fastcompress\FASTCompress\bin\Debug\FASTCompress.application
+C:\SourceCode\fastcompress\FASTCompress\bin\Debug\FASTCompress.exe
+C:\SourceCode\fastcompress\FASTCompress\bin\Debug\FASTCompress.pdb
+C:\SourceCode\fastcompress\FASTCompress\obj\Debug\FASTCompress.exe.manifest
+C:\SourceCode\fastcompress\FASTCompress\obj\Debug\FASTCompress.application
+C:\SourceCode\fastcompress\FASTCompress\obj\Debug\FASTCompress.exe
+C:\SourceCode\fastcompress\FASTCompress\obj\Debug\FASTCompress.pdb
