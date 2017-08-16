@@ -3,3 +3,9 @@ C:\SourceCode\fastcompress\FASTCompress\bin\Debug\FASTCompress.exe
 C:\SourceCode\fastcompress\FASTCompress\bin\Debug\FASTCompress.pdb
 C:\SourceCode\fastcompress\FASTCompress\obj\Debug\FASTCompress.exe
 C:\SourceCode\fastcompress\FASTCompress\obj\Debug\FASTCompress.pdb
+C:\SourceCode\FASTCompress\FASTCompress\bin\Debug\FASTCompress.exe.manifest
+C:\SourceCode\FASTCompress\FASTCompress\bin\Debug\FASTCompress.application
+C:\SourceCode\FASTCompress\FASTCompress\obj\Debug\FASTCompress.csprojResolveAssemblyReference.cache
+C:\SourceCode\FASTCompress\FASTCompress\obj\Debug\FASTCompress.TrustInfo.xml
+C:\SourceCode\FASTCompress\FASTCompress\obj\Debug\FASTCompress.exe.manifest
+C:\SourceCode\FASTCompress\FASTCompress\obj\Debug\FASTCompress.application
