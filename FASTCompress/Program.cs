@@ -51,6 +51,7 @@ namespace FASTCompress
             }
 
             Console.WriteLine("\nCompressing...\n");
+
                         
             // Reserve processor count # of threads
             Thread[] tArray = new Thread[numThreads];
@@ -74,13 +75,28 @@ namespace FASTCompress
                 {
                     for (int i = 0; i < tArray.Length; i++)
                     {
-                        tArray[i].Join();
+                        try
+                        {
+                            tArray[i].Join();
+                        }
+                        catch { }
                     }
                     Console.WriteLine("\nStarting New Batch\n");
                     count = 0;
                 }
             }
-            
+
+            // Get any remaining threads processed
+            for (int i = 0; i < tArray.Length; i++)
+            {
+                try
+                {
+                    tArray[i].Join();
+                }
+                catch { }
+            }
+
+
             stopwatch.Stop();
             long sec = stopwatch.ElapsedMilliseconds / 1000L;
 
@@ -89,8 +105,9 @@ namespace FASTCompress
             Exit();
         }
 
-        // Exit Gracefully
-        static void Exit()
+
+    // Exit Gracefully
+    static void Exit()
         {
             // Keep the console window open if we are debugging!
             if (System.Diagnostics.Debugger.IsAttached)

@@ -2,6 +2,7 @@
 using System.Drawing;
 using System.IO;
 using System;
+using System.Threading;
 
 namespace FASTCompress
 {
@@ -40,6 +41,8 @@ namespace FASTCompress
                 {
                     ImageCodecInfo jpgEncoder = GetEncoder(ImageFormat.Jpeg);
 
+                    ReaderWriterLock locker = new ReaderWriterLock();
+
                     // Create an Encoder object based on the GUID  
                     // for the Quality parameter category.  
                     System.Drawing.Imaging.Encoder myEncoder = System.Drawing.Imaging.Encoder.Quality;
@@ -52,7 +55,15 @@ namespace FASTCompress
 
                     Directory.CreateDirectory(Path.GetDirectoryName(outputFileName));
 
-                    bmp.Save(outputFileName, jpgEncoder, myEncoderParameters);
+                    try
+                    {
+                        locker.AcquireWriterLock(int.MaxValue);
+                        bmp.Save(outputFileName, jpgEncoder, myEncoderParameters);
+                    }
+                    finally
+                    {
+                        locker.ReleaseWriterLock();
+                    }
                 }
             }
             catch  //(Exception ex)
